@@ -1,0 +1,46 @@
+<!-- <div>
+  <li
+    class="d-flex border justify-content-around align-items-center border-black"
+    *ngFor="let user of userList"
+  > -->
+
+<!-- <h5>{{ user.name }}</h5>
+    <h5>{{ user.email }}</h5>
+    <h5>{{ user.subscription }}</h5>
+    <h5>{{ user.country }}</h5>
+    <h5>{{ user.city }}</h5>
+    <div>
+      <button class="btn btn-secondary">edit</button>
+      <button class="btn btn-secondary">X</button>
+    </div>
+  </li>
+</div> -->
+
+<div class="table-responsive bg-white">
+  <table class="table mb-0 text-align-center">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Suscrito</th>
+        <th>País</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList; let i = index">
+        <td>{{ user.name | titlecase }}</td>
+        <td>{{ user.email | titlecase }}</td>
+        <td>{{ user.subscription }}</td>
+        <td>{{ user.country | titlecase }}</td>
+        <td>{{ user.city | titlecase }}</td>
+        <td>
+          <button class="btn btn-secondary mx-1">edit</button>
+          <button class="btn btn-secondary mx-1" (click)="onDeleteUser(i)">
+            delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
