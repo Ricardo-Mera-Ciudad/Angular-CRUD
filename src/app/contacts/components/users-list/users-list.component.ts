@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../../interfaces/user.inerface';
-import { AddUsersService } from 'src/app/services/add-users.service';
 
 @Component({
   selector: 'users-list',
@@ -9,7 +7,7 @@ import { AddUsersService } from 'src/app/services/add-users.service';
 })
 export class UsersListComponent {
 
-  constructor(public addUsersService: AddUsersService) {}
+  constructor() {}
 
 }
 

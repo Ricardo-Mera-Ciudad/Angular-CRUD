@@ -1,11 +1,12 @@
 export interface User {
 
-    name: string,
-    password: string,
-    email: string,
-    subscription: boolean,
-    country: string,
-    city: string
+    name: any,
+    password: any,
+    reppass?: any,
+    email: any,
+    subscription: any,
+    country: any,
+    city: any
     
 }
 

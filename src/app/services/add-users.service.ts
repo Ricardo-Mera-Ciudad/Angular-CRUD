@@ -49,6 +49,7 @@ export class AddUsersService {
     this.users.push(newUser);
   }
 }
+
 // onNewCharacter(character: Character): void {
 //   const newCharacter: Character = {id: uuid(), ...character};
 //   this.characters.push(newCharacter);

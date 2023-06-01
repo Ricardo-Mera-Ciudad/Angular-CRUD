@@ -1,49 +1,95 @@
 <div class="bg-secondary border-right p-3" id="sidebar">
   <h4 class="text-white">Formulario de registro</h4>
 
-  <form (submit)="addUsersService.addNewUser(newUser)">
+  <form [formGroup]="newUser">
     <div class="form-group my-2">
       <label for="usernameInput" class="my-1">Nombre de usuario</label>
-      <input name="name" type="text" class="form-control" id="usernameInput" placeholder=""/>
+      <input
+        formControlName="name"
+        required
+        type="text"
+        class="form-control"
+        id="usernameInput"
+        placeholder=""
+      />
     </div>
 
     <div class="form-group my-2">
       <label for="passInput" class="my-1">Contraseña</label>
-      <input name="pass" type="password" class="form-control" id="passInput" placeholder="" />
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="passInput"
+        placeholder=""
+      />
     </div>
 
     <div class="form-group my-2">
       <label for="confirmpassInput" class="my-1">Confirmar contraseña</label>
-      <input name="reppass" type="password" class="form-control" id="confirmpassInput" placeholder="" />
+      <input
+        formControlName="reppass"
+        type="password"
+        class="form-control"
+        id="confirmpassInput"
+        placeholder=""
+      />
     </div>
 
     <div class="form-group my-2">
       <label for="emailInput" class="my-1">Correo</label>
-      <input name="email" type="email" class="form-control" id="emailInput" placeholder="" />
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="emailInput"
+        placeholder=""
+      />
     </div>
 
     <div class="form-check my-2">
       <label class="form-check-label" for="promoInput">
         Enviarme ofertas promocionales
       </label>
-      <input name="subscription" class="form-check-input" type="checkbox" value="" id="promoInput"/>
+      <input
+        formControlName="subscription"
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="promoInput"
+      />
     </div>
 
     <div class="form-group my-2">
-      <select name="country" class="custom-select p-2">
+      <select name="country"  formControlName="subscription" class="custom-select p-2">
         <option selected>Country</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
       </select>
     </div>
 
     <div class="form-group my-2">
       <label for="cityInput" class="my-1"> Ciudad </label>
-      <input name="city" type="text" class="form-control" id="cityInput" placeholder="" />
+      <input
+        formControlName="city"
+        name="city"
+        type="text"
+        class="form-control"
+        id="cityInput"
+        placeholder=""
+      />
     </div>
 
-    <button type="submit" class="btn btn-primary my-3">Agregar</button>
-
+    <button type="submit" class="btn btn-primary my-3" (click)="onAddUser()">Agregar</button>
   </form>
+
+  <!-- <button
+    (click)="addUsersService.addNewUser(newUser)"
+    class="btn btn-primary my-3"
+  >
+    add
+  </button> -->
+
+  <button (click)="logUser()" class="btn btn-primary my-3">log</button>
 </div>
