@@ -49,4 +49,5 @@ export class SideBarComponent {
     console.log(this.userValue);
     this.addUsersService.addNewUser(this.userValue);
   }
+  //git test
 }
